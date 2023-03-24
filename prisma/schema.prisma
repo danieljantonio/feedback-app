@@ -10,3 +10,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  name  String?
+
+  @@map("users")
+}
+
+model Review {
+  id            Int    @id @default(autoincrement())
+  message       String
+  communication Int
+  item          Int
+  value         Int
+
+  @@map("reviews")
+}
