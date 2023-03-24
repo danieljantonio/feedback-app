@@ -1,2 +1,53 @@
 .page {
+  width: 100%;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 2rem auto;
+}
+
+.text-lg {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.rating {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
+}
+
+.rating .rating-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.rating .rating-item .rating-value-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
 }
