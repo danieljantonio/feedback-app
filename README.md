@@ -19,3 +19,28 @@ Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and 
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
+
+## Task
+
+Task: Based off the attached screenshot, create a page that allows someone to add "feedback/reviews". When a person clicks on a "Add review" button, a dialog will appear allowing them to type a message (textarea), and three options from 1 - 5 (communication, item, value). This should then be persisted to a back-end API / database. For the person avatar/name - this can simply be dummy values.
+
+- [ ] Create a page that allows to add "feedback/reviews"
+- [ ] Click "Add review" -> Dialog for users to add their review
+  - [ ] Type a message (textarea)
+  - [ ] Three options to rate from 1 - 5 (communication, item, value)
+- [ ] Reviews should be persisted to the database.
+
+For tech stack:
+
+- Front end: NextJS, React, MUI
+- Back end: NestJS, Prisma
+
+MUI contains some components that you can re-use so that you shouldn't need to build it out yourself.
+
+- https://mui.com/material-ui/react-text-field/#multiline
+- https://mui.com/material-ui/react-rating/
+- https://mui.com/material-ui/react-dialog/
+
+![UI Reference](https://github.com/danieljantonio/feedback-app/blob/main/ui-reference.jpg?raw=true)
+
+What I may recommend is that, implement the basic UI first, and load the data from an API (as dummy / mock data). Then proceed ahead with the dialog and adding of new reviews into the database
