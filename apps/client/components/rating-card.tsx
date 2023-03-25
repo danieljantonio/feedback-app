@@ -1,19 +1,20 @@
-import { Avatar } from '@mui/material';
+import { Avatar, Grid, Stack } from '@mui/material';
 import styles from '../pages/index.module.css';
+import { grey } from '@mui/material/colors';
 
 const RatingCard = ({ message }) => {
   return (
-    <div style={{ maxWidth: '48%', margin: '1rem 0' }}>
+    <Grid item md={6}>
       <div className={styles['flex-center']}>
         <Avatar
           alt="Bob Ross Avatar"
           src="/avatar.jpg"
-          style={{ height: 50, width: 50 }}
+          style={{ height: 65, width: 65 }}
         />
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <p>Bob Ross</p>
-          <p>23 June 2023</p>
-        </div>
+        <Stack spacing={1}>
+          <p style={{ fontWeight: 500 }}>Bob Ross</p>
+          <p style={{ color: grey[600] }}>23 June 2023</p>
+        </Stack>
       </div>
       <div
         style={{
@@ -22,7 +23,7 @@ const RatingCard = ({ message }) => {
       >
         {message}
       </div>
-    </div>
+    </Grid>
   );
 };
 

@@ -1,5 +1,6 @@
 .page {
   width: 100%;
+  padding: 1rem;
 }
 
 .container {
@@ -13,7 +14,7 @@
 }
 
 .rating {
-  margin: 2rem 0;
+  margin: 2rem 0 3rem;
   display: flex;
   flex-direction: column;
   max-width: 25rem;
@@ -26,7 +27,7 @@
   margin: 0.5rem 0;
 }
 
-.rating .rating-item .rating-value-container {
+.rating .rating-value-container {
   display: flex;
   justify-content: center;
   align-items: center;

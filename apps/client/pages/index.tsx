@@ -1,6 +1,8 @@
 import styles from './index.module.css';
 import RatingCard from '../components/rating-card';
 import ReviewItem from '../components/review-item';
+import { useState } from 'react';
+import { Button, Container, Grid, Stack } from '@mui/material';
 
 const placeholderReviews = [
   'Matt And Jamie Were Wonderful Hosts For Our Party! The Palace Proved To Be The Perfect Place For Our Group. Everyone Was Super Comfortable, The Rooms Were Beautiful And We Had',
@@ -10,21 +12,25 @@ const placeholderReviews = [
 ];
 
 export function Index() {
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+
   return (
     <div className={styles.page}>
-      <div className={styles.container}>
+      <Container maxWidth="lg">
         <h1 className={styles['text-lg']}>Reviews</h1>
         <div className={styles['rating']}>
-          <ReviewItem placeholder="Communication" value={90} />
-          <ReviewItem placeholder="Item Condition" value={90} />
-          <ReviewItem placeholder="Value" value={90} />
+          <Stack spacing={2}>
+            <ReviewItem placeholder="Communication" value={90} />
+            <ReviewItem placeholder="Item Condition" value={90} />
+            <ReviewItem placeholder="Value" value={90} />
+          </Stack>
         </div>
-        <div className={styles['reviews']}>
+        <Grid container spacing={2} justifyContent="space-between">
           {placeholderReviews.map((message, i) => (
             <RatingCard message={message} key={i} />
           ))}
-        </div>
-      </div>
+        </Grid>
+      </Container>
     </div>
   );
 }
