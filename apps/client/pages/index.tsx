@@ -4,7 +4,7 @@ import ReviewItem from '../components/review-item';
 import { useState } from 'react';
 import { Button, Container, Grid, Stack } from '@mui/material';
 import ReviewDialog from '../components/review-dialog';
-import { useMutation, useQuery } from 'react-query';
+import { useMutation, useQuery, useQueryClient } from 'react-query';
 import axios from 'axios';
 import { blue } from '@mui/material/colors';
 
@@ -41,6 +41,8 @@ export type ReviewStats = {
 
 export function Index() {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+  const queryClient = useQueryClient();
+
   const reviewsQuery = useQuery('getReviews', () => {
     return axios
       .get('http://localhost:3333/api/reviews')
@@ -56,6 +58,10 @@ export function Index() {
   const createReview = useMutation({
     mutationFn: (newReview) => {
       return axios.post('http://localhost:3333/api/reviews', newReview);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['getReviews'] });
+      queryClient.invalidateQueries({ queryKey: ['getStats'] });
     },
   });
 
@@ -112,6 +118,8 @@ export function Index() {
           open={modalIsOpen}
           closeModal={() => setModalIsOpen(false)}
           onSubmit={(newReview) => createReview.mutate(newReview)}
+          isSubmitting={createReview.isLoading}
+          isSubmitted={createReview.isSuccess}
         />
       </Container>
     </div>
