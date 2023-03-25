@@ -1,5 +1,4 @@
 import { Grid, LinearProgress } from '@mui/material';
-import styles from '../pages/index.module.css';
 import { blue } from '@mui/material/colors';
 
 const ReviewItem = ({ placeholder, value }) => {
