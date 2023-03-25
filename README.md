@@ -28,7 +28,7 @@ Task: Based off the attached screenshot, create a page that allows someone to ad
 - [x] Click "Add review" -> Dialog for users to add their review
   - [x] Type a message (textarea)
   - [x] Three options to rate from 1 - 5 (communication, item, value)
-- [ ] Reviews should be persisted to the database.
+- [x] Reviews should be persisted to the database.
 
 For tech stack:
 
