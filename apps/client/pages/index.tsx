@@ -1,5 +1,5 @@
 import styles from './index.module.css';
-import RatingCard from '../components/rating-card';
+import RatingCard from '../components/review-card';
 import ReviewItem from '../components/review-item';
 import { useState } from 'react';
 import { Button, Container, Grid, Stack } from '@mui/material';
