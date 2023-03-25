@@ -24,10 +24,10 @@ Visit the [Nx Documentation](https://nx.dev) to learn more.
 
 Task: Based off the attached screenshot, create a page that allows someone to add "feedback/reviews". When a person clicks on a "Add review" button, a dialog will appear allowing them to type a message (textarea), and three options from 1 - 5 (communication, item, value). This should then be persisted to a back-end API / database. For the person avatar/name - this can simply be dummy values.
 
-- [ ] Create a page that allows to add "feedback/reviews"
-- [ ] Click "Add review" -> Dialog for users to add their review
-  - [ ] Type a message (textarea)
-  - [ ] Three options to rate from 1 - 5 (communication, item, value)
+- [x] Create a page that allows to add "feedback/reviews"
+- [x] Click "Add review" -> Dialog for users to add their review
+  - [x] Type a message (textarea)
+  - [x] Three options to rate from 1 - 5 (communication, item, value)
 - [ ] Reviews should be persisted to the database.
 
 For tech stack:
