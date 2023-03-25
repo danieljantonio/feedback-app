@@ -16,9 +16,10 @@ import { FC, useState } from 'react';
 type Props = {
   open: boolean;
   closeModal: () => void;
+  onSubmit: (newReview) => void;
 };
 
-const ReviewDialog: FC<Props> = ({ open, closeModal }) => {
+const ReviewDialog: FC<Props> = ({ open, closeModal, onSubmit }) => {
   const [itemReview, setItemReview] = useState<ReviewProps>({} as ReviewProps);
 
   return (
@@ -71,7 +72,7 @@ const ReviewDialog: FC<Props> = ({ open, closeModal }) => {
         </FormControl>
       </DialogContent>
       <DialogActions>
-        <Button onClick={() => console.log(itemReview)}>Submit Review</Button>
+        <Button onClick={() => onSubmit(itemReview)}>Submit Review</Button>
       </DialogActions>
     </Dialog>
   );
