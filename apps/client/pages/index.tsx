@@ -111,7 +111,7 @@ export function Index() {
         <Grid container spacing={2} justifyContent="space-between">
           {!reviewsQuery.isLoading &&
             reviewsQuery.data.map((review, i) => (
-              <RatingCard message={review.message} key={i} />
+              <RatingCard review={review} key={i} dummyUserId={i} />
             ))}
         </Grid>
         <ReviewDialog
