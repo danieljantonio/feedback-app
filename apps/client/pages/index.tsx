@@ -20,8 +20,8 @@ export function Index() {
           <ReviewItem placeholder="Value" value={90} />
         </div>
         <div className={styles['reviews']}>
-          {placeholderReviews.map((message) => (
-            <RatingCard message={message} />
+          {placeholderReviews.map((message, i) => (
+            <RatingCard message={message} key={i} />
           ))}
         </div>
       </div>

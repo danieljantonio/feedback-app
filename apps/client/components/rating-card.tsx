@@ -3,7 +3,7 @@ import styles from '../pages/index.module.css';
 
 const RatingCard = ({ message }) => {
   return (
-    <div style={{ maxWidth: '49%' }}>
+    <div style={{ maxWidth: '48%', margin: '1rem 0' }}>
       <div className={styles['flex-center']}>
         <Avatar
           alt="Bob Ross Avatar"
