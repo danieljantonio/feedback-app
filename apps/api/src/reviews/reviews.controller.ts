@@ -15,4 +15,9 @@ export class ReviewsController {
   getAll() {
     return this.reviewService.getAll();
   }
+
+  @Get('/stats')
+  getStats() {
+    return this.reviewService.getStats();
+  }
 }

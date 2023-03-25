@@ -16,4 +16,14 @@ export class ReviewsService {
   getAll(): Promise<Review[]> {
     return prisma.review.findMany({});
   }
+
+  getStats(): Promise<any> {
+    return prisma.review.aggregate({
+      _avg: {
+        communication: true,
+        condition: true,
+        value: true,
+      },
+    });
+  }
 }
